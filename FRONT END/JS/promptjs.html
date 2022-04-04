@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT PROMPT</title>
+    
+</head>
+<body>
+    <button type="button" onclick="submit()">Submit </button>
+    <button type="button" onclick="Askusername()">Click </button>
+    <button type="button" onclick="GetList()">View Courses</button>
+    <button type="button" onclick="ChangeAnchorAttributes()">Anchor Demo</button>
+    <button type="button" onclick="ChangeParaContent()">Training Details</button>
+    <button type="button" onclick="Microsoft()">Open Microsoft Website</button>
+    <!--Creating a List-->
+    <ul id="list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+    <hr>
+    <a id="myAnchor" href="http://www.google.com" title="Google">Google Search Engine</a>
+    <br>
+    <p id="para" style="color:blue"></p>
+    <input type="text" id="cname" placeholder="Enter the Course Name">
+    <p>Hello Everyone!!! How is the <i id="course">Training</i></p>
+    <p onclick="ibm()">ibm</p>
+    <script>
+        function ibm()
+        {
+            window.open("http://www.ibm.com")
+        }
+        function ChangeParaContent()
+        {
+            var coursename=document.getElementById("cname").value;
+            document.getElementById("course").innerHTML=coursename;
+
+        }
+        //Change the Anchor tag attributes
+        function ChangeAnchorAttributes()
+        {
+            document.getElementById("myAnchor").innerHTML="DLithe";
+            document.getElementById("myAnchor").href="http://www.dlithe.com";
+            document.getElementById("myAnchor").target="_blank";
+            document.getElementById("myAnchor").title="DLithe";
+        }
+        //Retrieve list items from <li> and display them in <p> tag
+        function GetList()
+        {
+           var listitems= document.getElementById("list").innerHTML;
+           document.getElementById("para").innerHTML=listitems;
+        }
+        function submit()
+        {
+            var msg=confirm("Do you want to Exit?")
+            if (msg)
+            {
+                alert ("See you soon!!")
+                window.location="https://www.amazon.in";
+            }
+            else
+            {
+                alert("Thank you for staying on this page.")
+            }
+
+        }
+
+        function AskName()
+        {
+            var name=prompt("Please Enter your name?");
+            alert ("Hello "+name);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+        //NORMAL FUNCTION
+        function greeting()
+        {
+            console.log("Normal Function");
+        }
+        //ARROW FUNCTION
+        let greet=()=>console.log(" Arrow Functions ");
+        //ARROW FUNCTION WITH A PARAMETER
+        let EmpDetails=name=>console.log(name);
+        
+        //EXPRESSION IN AN ARROW FUNCTION
+        let attendancecount=15;
+        //Ternary Operator- ?=true :=false
+        let CheckAttendance=(attendancecount<15)?()=>console.log("ternary operater true")
+                                                :()=>console.log("ternary operater false");
+        //ARROW FUNCTION WITH 2 PARAMETERS
+        let mul=(num1,num2)=>
+        {
+            let result=num1*num2;
+            return result;
+        }
+        EmpDetails("John");
+        greet();
+        greeting();
+        CheckAttendance();
+        let answer=mul(12,2);
+        console.log(answer);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script 
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<style>
+   p {background-color:#bca; width:200px; border:1px solid green;}
+</style>
+<script>
+$(document).ready(function(){
+  $("#toggle").click(function(){
+    $(".target").slideToggle(1000, 
+    function(){
+      alert("The slideToggle() method is finished!");
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+  <p>Click on the following button:</p>
+  <button id = "toggle"> Toggle </button>
+
+  <div class = "target">
+     <img src = "assets/anime.jpg" alt = "jQuery" width="500" height="500" />
+  </div>
+  <script>
+    $(document).ready(function () {
+      $("#3").click(function () {
+        $("#1").css("color", "red").slideUp(2000).slideDown(2000).fadeOut(1000);;
+        $("#d1").slideToggle(1000).css("color", "purple").css("font-size", "30px");
+      });
+    });
+  </script>
+  <br>
+
+  <div id="d1" style="font-size: large;margin-left: 300px;">hello</div>
+  <br>
+
+  <button id="3">Chaining</button>
+  <p id="1">hello</p>
+
+</body>
+</html>

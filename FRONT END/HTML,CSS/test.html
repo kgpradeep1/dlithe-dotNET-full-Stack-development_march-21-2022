@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    p {
+      background: blue;
+      padding: 20px;
+    }
+    h1{
+        background: orange;
+        padding: 30px;
+    }
+    h2{
+        background: salmon;
+        padding: 20px;
+    }
+  </style>
+
+</head>
+<body>
+    <h1>EXAMPLES</h1>
+    <hr>
+    <script>
+        $(document).ready(function()
+        {
+          $("p").click(function()
+          {
+            $(this).hide();
+          });
+        });
+        </script>
+<p>click me 1</p>
+<p>click me 2</p>
+<p>click me 3</p>
+
+<hr>
+
+<script>
+    $(document).ready(function(){
+      $("#h1").mouseenter(function(){
+        alert("You entered h1!");
+      });
+    });
+    </script>
+<h1 id="h1">MOUSEENTER</h1>
+
+<hr>
+<script>
+    $(document).ready(function(){
+      $("#h2").hover(function(){
+        alert("hover");
+      },
+      function(){
+        alert("Bye!");
+      }); 
+    });
+    </script>
+
+<h2 id="h2">hover</h2>
+
+<hr>
+
+<script>
+    $(document).ready(function(){
+      $("input").focus(function(){
+        $(this).css("background-color", "red");
+      });
+      $("input").blur(function(){
+        $(this).css("background-color", "yellow");
+      });
+    });
+    </script>
+
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
+<hr>
+    <script>
+        $(document).ready(function(){
+          $("h5").on({
+            mouseenter: function(){
+              $(this).css("background-color", "green");
+            },  
+            mouseleave: function(){
+              $(this).css("background-color", "orange");
+            }, 
+            click: function(){
+              $(this).css("background-color", "grey");
+            }  
+          });
+        });
+        </script>
+
+        
+<h5>mouseenter mouseleave click.</h5>
+
+</body>
+</html>

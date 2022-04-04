@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT object</title>
+</head>
+<body>
+    <script>
+        //object-3 properties-key value
+        const employee=
+        {
+            empid:1543,
+            empname:"NUMAN",
+            designation:"HR"
+        }
+        document.write(employee.empid+"<br>");
+        document.write(employee.empname+"<br>");
+        document.write(employee.designation+"<br>");
+
+        var details="";
+        for (var emp in employee)
+        {
+            details+=employee[emp]+"<br> ";
+        }
+        document.write(details+"<br>");
+
+        //Adding a property to an existing object
+        employee.Salary=35870;
+        var details="";
+        for (var emp in employee)
+        {
+            details+=employee[emp]+"<br> ";
+        }
+        document.write(details+"<br>");
+        
+        //delete a property
+        delete employee.designation;
+        var details="";
+        for (var emp in employee)
+        {
+            details+=employee[emp]+"<br> ";
+        }
+        document.write(details+"<br>");
+        //Nested Objects
+        const Course=
+        {
+            courseid:100,
+            coursename:"WebUI",
+            //Nested Object
+                coursedetails:
+                {
+                    coursedetail1:"HTML",
+                    coursedetail2:"CSS",
+                    coursedetail3:"BOOTSTRAP",
+                    coursedetail4:"JS"
+                }
+        }
+        document.write(Course.courseid+"<br>");
+        document.write(Course.coursename+"<br>");
+        document.write(Course.coursedetails.coursedetail1+"<br>");
+        document.write(Course.coursedetails.coursedetail2+"<br>");
+        document.write(Course.coursedetails.coursedetail3+"<br>");
+        document.write(Course.coursedetails.coursedetail4+"<br>");
+
+        //Function in an object
+        const WebUI=
+        {
+            course1:"HTML",
+            course2:"CSS",
+            course3:"JS",
+            GetCourses:function()
+            {
+                return this.course1+","+this.course2+","+this.course3+"<br>";    
+            }
+        }
+        document.write("<hr>"+WebUI.GetCourses());
+
+        //Pass by reference in objects
+        //empname and emp1 share the same memory address
+        function GetName(empname)
+        {
+            empname.employeename="Peter";
+        }
+        const emp1=
+        {
+            employeename:"John"
+        };
+        document.write(emp1.employeename+"<br>");
+        GetName(emp1);
+        document.write(emp1.employeename+"<br>");
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance</title>
+    <style>
+        body {
+           font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .result {
+           font-size: 18;
+           color: rgb(43, 226, 116);
+           font-weight: 500;
+        }
+     </style>
+</head>
+<body>
+    <h1>JavaScript Inheritance</h1>
+<div class="result"></div>
+<button class="Btn">CLICK HERE</button>
+<h3>
+Click on the above button to call the welcome method inherited by person1 and person2 object
+</h3>
+<script>
+   let BtnEle = document.querySelector(".Btn");
+   let resEle = document.querySelector(".result");
+   function Person(name, age, city) {
+      this.name = name;
+      this.age = age;
+      this.city = city;
+   }
+   Person.prototype.welcome = function () {
+      resEle.innerHTML +=
+      " Welcome "+this.name+" age: "+this.age +" city: "+this.city+"<br>";
+   };
+   BtnEle.addEventListener("click", () => {
+      let person1 = new Person("numan", 23, "Bangalore");
+      person1.welcome();
+      let person2 = new Person("numanu", 22, "chennai");
+      person2.welcome();
+   });
+</script>
+    
+</body>
+</html>

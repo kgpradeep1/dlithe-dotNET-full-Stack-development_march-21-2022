@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        var text1 = 'hello';
+        var text2 = 'world';
+        var text3 = '     JavaScript    ';
+
+// concatenating two strings
+document.getElementById("demo").innerHTML=text1 + text2 +"<br>";   
+document.getElementById("demo1").innerHTML=text3;   
+
+// converting the text to uppercase
+document.write(text1.toUpperCase() + "<br>");
+// converting the text to lowercase
+document.write(text2.toLowerCase() + "<br>");
+// slice
+        var text4="     javascript       ";
+        var text5=text4.slice(2,6);
+        document.write(text5 +"<br>");
+        //trim
+        var text7=text5.trim();
+        document.write(text7 +"<br>");
+        var text8=text7.slice(2,6);
+        document.write(text8 +"<br>");
+        //split
+        var names="blue black red";
+        document.write(names.split(" ")+"<br>");
+
+        for(var i=0;i<8;i++)
+            document.write(names[i]);
+        
+        document.write("<br>");
+        
+    </script>
+    
+</body>
+</html>

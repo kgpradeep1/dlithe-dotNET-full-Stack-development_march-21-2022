@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        var courses=["C++","C","C#"];
+        document.write(courses+"<br>")
+        document.write(courses.length +"<br>");
+
+        /*PUSH-ADDS THE ELEMENT AT THE END OF THE ARRAY*/
+        document.write(courses.push("JAVA","R","RUBY")+"<br>");
+        document.write(courses+"<br>");
+
+        /*UNSHIFT-ADDS THE ELEMENT AT THE BEGINNING OF THE ARRAY*/
+        courses.unshift("PYTHON");
+        document.write(courses+"<br>");
+
+        /*POP-REMOVES THE ELEMENT AT THE END OF THE ARRAY*/
+        var last=courses.pop();
+        document.write(last+"<br>")
+        document.write(courses+"<br>");
+
+        /*SHIFT-REMOVES THE ELEMENT AT THE BEGINNING OF THE ARRAY*/
+        var first=courses.shift();
+        document.write(first+"<br>");
+        document.write(courses+"<br>"+"<hr>");
+
+        var vehicles=["AI","VR","AR","ML"];
+        //splice(start,deletecount,item1,item2)
+        document.write(vehicles+"<br>");
+        vehicles.splice(1,0,'NP');
+        document.write(vehicles+"<br>");
+        vehicles.splice(4,1,'SENSORS');
+        document.write(vehicles+"<br>");
+        vehicles.splice(3,2,'CRYPTOGRAPHY','ML');
+        document.write(vehicles+"<br>"+"<hr>");
+
+        var numbers1=["WHITE","BLACK","RED"];
+        var numbers2=["ORENGE","YELLOW","GREEN"];
+        var numbers=numbers1.concat(numbers2);
+        document.write(numbers+"<br>");
+        var num=numbers.concat("GOLD","BLUE");
+        document.write(num+"<br>");
+        var num1=num.concat(55,66,77,88+ "<br>");
+        document.write(num1+"<br>");
+        //entries()-displays the key/value pairs for each index in the array
+        var iterateindex =num1.entries();
+        for(var item of iterateindex)
+        {
+            document.write(item+"<br>");
+        }
+        //reverse()
+        num1.reverse();
+        document.write(num1+"<br>"+"<hr>");
+        //indexOf
+        //os="Windows,Linux"
+        var nums=["one","two","three","four","five","six"];
+        var result=nums.indexOf("three");
+        document.write(result+"<br>");
+        var result1=nums.lastIndexOf("three");
+        document.write(result1+"<br>"+"<hr>");
+
+        document.write(nums.toString()+"<br>");
+        document.write(nums.join()+"<br>");
+        
+        //slice
+        var result2=nums.slice(1,5);
+        document.write(result2+"<br>");
+        var result3=nums.slice(-5,-1);
+        document.write(result3+"<br>");
+
+        //sort
+        var values=[9,8,7,6,5,4,3];
+        document.write(values.sort()+"<br>");
+
+        //filter
+        var empname=["red","blue","green","gold","black","white"];
+        var result4=empname.filter(empname=>empname.length==4);
+        document.write(result4);
+    </script>
+    
+</body>
+</html>

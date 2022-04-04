@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h1>js class</h1>
+
+<p id="demo"></p>
+
+<script>
+class mobile {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age(x) {
+    return x - this.year;
+  }
+}
+
+let date = new Date();
+let year = date.getFullYear();
+
+let mymobile = new mobile("HTC", 2018);
+document.getElementById("demo").innerHTML=
+"My mobile is " + mymobile.age(year) + " years old.";
+</script>
+
+</body>
+</html>

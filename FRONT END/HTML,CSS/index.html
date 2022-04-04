@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--External stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--internal stylesheet-->
+    <style>
+      h4
+        {
+            text-align: center;
+            background-color: blue;
+            color:aliceblue;
+            text-decoration: underline;
+            font-size: larger;
+        }
+        pre
+        {
+            background-color: greenyellow;
+            color: blueviolet;
+            
+        }
+        h1
+        {
+          text-align: center;
+          background-color: gold;
+          color: red;
+        }
+        *
+        {
+            color: lightcoral;
+            font-size: larger;
+        }
+        h1::first-line
+        {
+            color: black;
+            font-size: xx-large;
+        }  
+        body
+        {
+            background-image: url("assets/technology.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        table
+        {
+            width: 100%;
+        }
+        th
+        {
+            height: 25px;
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
+            color: rgb(215, 221, 250);
+        }
+        tr:nth-child(even)
+        {
+            background-color: orange;
+            color: greenyellow;
+        }
+        tr:nth-child(odd)
+        {
+            background-color: rgb(215, 221, 250);
+            color: brown;
+        }
+        tr:hover
+        {
+            background-color:chartreuse;
+            color: rgb(255, 123, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>welcome to this site </h1>
+    <h2> top 10  technologies in the world</h2>
+    <h4>this is about top technologies in the world</h4>
+    <hr>
+    <p>As a futurist, every year, I look ahead and predict the key tech trends that will shape the next few months. There are so many innovations and breakthroughs happening right now, and I can't wait to see how they help to transform business and society in 2022.</p>
+     <br>
+     <pre>Let’s take a look at my list of key tech
+    trends that everyone shoulhd be ready for, starting today.
+     </pre>
+     <br>
+     <!---inline stylesheet-->
+     <span style="background-color: greenyellow;">Link</span>
+    <br>
+    <!--Links in HTML-->
+    <!--Navigation-->
+    <a href="https://www.idropnews.com/" target="_blank" title="the latest blog">Forbs</a>
+    <br>
+    <!--image tag-->
+    <img src="assets/tech.jpg" height="200px" width="200px" alt="tech">
+    <br>
+     <!--LISTS-->
+    <!--ordered,unordered,definition list-->
+    <ol type="I">
+        <li> Computing Power. Computing power will continue to explode in 2022</li>
+        <li>Smarter Devices</li>
+        <li>Quantum computing</li>
+        <li>Data fiction</li>
+    </ol>
+    <h4>About to rise</h4>
+    <ul type="circle">
+        <li>Extended reality</li>
+        <li>3D printing</li>
+        <li>Digital trust</li>
+    </ul>
+    <ol>
+        <h4>top two technologies are</h4>
+        <ul>
+            <li><a href="assets/ai.jpg">AI</a></li>
+        </ul>
+        <ul>
+            <li><a href="assets/ml.jpg">Machine learning</a></li>
+        </ul>
+    </ol>
+
+  <!--iframes-->
+    <!--embed another document in the current document-iframes-->
+    <iframe src="assets/tech.html" height="400px" width="400px"></iframe>
+    <br>
+    <iframe src="https://www.idropnews.com/" height="400px" width="400px"></iframe>
+    <br>
+    <iframe src="assets/tech.html" height="400px" width="400px" name="news"></iframe>
+    <br>
+    <a href="https://www.idropnews.com/" target="news" title="news">Google</a>
+     <!--audio tag-->
+     <audio controls autoplay muted>
+        <source src="assets/sample-3s.mp3" type="audio/mp3">
+    </audio>
+    <br>
+    <!--video tag-->
+    <video width="800px" controls poster="assets/tech.jpg">
+        <source src="assets/World - 1992.mp4" type="video/mp4">
+    </video>
+    <!--TABLES-->
+<table border="1">
+        <tr>
+          <td>&nbsp;</td>
+          <td>AI</td>
+          <td>machine-learning</td>
+          <td>3d printing</td>
+          <td>AR</td>
+        </tr>
+        <tr>
+          <td>percentage</td>
+          <td>90</td>
+          <td>80</td>
+          <td>85</td>
+          <td>90</td>
+        </tr>
+        <tr>
+          <td>ocupied</td>
+          <td>16</td>
+          <td>9</td>
+          <td>10</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>quantum computing</td>
+          <td>VR</td>
+          <td>digital aspects</td>
+          <td>extended reality</td>
+          <td>smart Devices</td>
+        </tr>
+        <tr>
+          <td>percentage</td>
+          <td>90</td>
+          <td>80</td>
+          <td>70</td>
+          <td>85</td>
+        </tr>
+      </table>
+      
+
+</body>
+</html>

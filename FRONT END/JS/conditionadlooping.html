@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTROL STATEMENTS</title>
+</head>
+<body>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+   <p id="demo"></p>
+    <script>
+         var num1=10;
+         var num2=20;
+         var num3=3;
+         if(num1>num2)
+         {
+             if(num1>num3)
+             {
+                 document.write("Num1 is the greatest");
+             }
+         }
+         else if(num2>num3)
+         {
+             document.write("Num2 is the greatest");
+         }
+         else
+         {
+             document.write("Num3 is the greatest");
+         }
+
+         document.write("<br>");
+         var course="c#";
+         switch(course)
+         {
+             case "C#":document.write("You have chosen CSharp Programming");
+                        break;
+             case "Java":document.write("You have chosen Java Programming");
+                        break;
+            default:document.write("Invalid Course");
+                    break;
+         }
+         document.write("<br>");
+         document.write("<hr>");
+        
+         //for loop
+         var sum=0;
+         //Increment ++ +1
+         //Decrement -- -1
+         for(var i=0;i<5;i++)
+         {
+             //Arithmetic Assignment += -= *= /= %= 
+            sum+=i; //sum=sum+i; 
+            document.write(sum + "<br>");
+         }
+
+         //while loop
+         var j=10;
+         while(j<5)
+         {
+             document.write("Value is: "+j+"<br>");
+             j++;
+         }
+
+         //do-while
+         var k=10;
+         do
+         {
+             document.write("Value is: "+k+"<br>");
+             k++;
+         }while(k<5);
+         
+    </script>
+    
+</body>
+</html>

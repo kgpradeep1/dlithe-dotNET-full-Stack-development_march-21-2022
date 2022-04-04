@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+</head>
+<body>
+    <script>
+        function Employee(id,name)
+        {
+          var eId=id;
+          var ename=name;
+          Object.defineProperty(this,"name",{
+            get:function()
+            {
+              return ename;
+            },
+          set:function(ename)
+          {
+            this.ename=ename;
+          }
+         
+        });
+         
+            Object.defineProperty(this,"id",{
+            get:function()
+            {
+              return eId;
+            },
+          set:function(eId)
+          {
+            this.eId=eId;
+          }
+         
+        });
+         
+        }
+          var emp=new Employee(3424, "NUMAN");
+          document.writeln(emp.id+" "+emp.name);
+        </script>
+</body>
+</html>
